@@ -1,18 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试</title>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./dist/layui/css/layui.css">
+    <title>Hello, world!</title>
 </head>
 
 <body>
-    <h1>hello world</h1>
+    <div id="toggle">
+        <div id="toggle-title"><h2>title</h2></div>
+        <div id="toggle-select"></div>
+        <div id="toggle-comfire"><button>确认</button></div>
+    </div>
+    <!-- <h1>hello world</h1>
     <input type="file" id="J_import" onchange="readFile(this)" style="display: none;">
-    <label for="J_import">导入</label>
+    <label for="J_import">导入</label> -->
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md12" style="text-align: center;">
+                <h1 class="title">工具箱</h1>
+            </div>
+        </div>
+        <div class="layui-row">
+            <hr>
+            <div class="layui-col-md8">
+                <span>计算单价和总价</span>
+            </div>
+            <div class="layui-col-md1">
+                <label for="importKucun"><input type="file" id="importKucun" onchange="importKucun(this)" style="display: none;">导入库存表</label>
+            </div>
+            <div class="layui-col-md1">
+                <label for="importJiage"><input type="file" id="importJiage" onchange="importJiage(this)" style="display: none;">导入价格表</label>
+            </div>
+            <div class="layui-col-md1">
+                <label for="Export">导出最终的表</label>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <script src="./dist/layui/layui.js"></script>
     <script src="dist/xlsx.full.min.js"></script>
     <script src="js/import.js"></script>
+    <style type="text/css">
+        #toggle {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            margin: auto;
+            top: 200px;
+            left: 50%;
+            transform: translate(-50%,0);
+            width: 400px;
+            height: 300px;
+            overflow: auto;
+            background-color: rgb(167, 167, 167);
+            text-align: center;
+
+        }
+    </style>
 </body>
+
 </html>
+
